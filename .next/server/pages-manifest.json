@@ -1,14 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/api/company/[id]": "pages/api/company/[id].js",
-  "/api/company": "pages/api/company.js",
-  "/api/hello": "pages/api/hello.js",
-  "/api/login": "pages/api/login.js",
-  "/api/user": "pages/api/user.js",
-  "/": "pages/index.js",
-  "/login": "pages/login.js",
-  "/register": "pages/register.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/": "pages/index.js",
+  "/login": "pages/login.js"
 }

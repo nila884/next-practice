@@ -62,10 +62,10 @@ export default function About(props) {
     <div>
       {!profile ? (
         <Link href='/login'>
-        <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 lg:mt-0">Login</a>
+        <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Login</a>
         </Link>
       ):(
-        <a href="#" onClick={e => handleOnClickLogout(e)} className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 lg:mt-0">Logout</a>
+        <a href="#" onClick={e => handleOnClickLogout(e)} className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Logout</a>
       )}
     </div>
   </div>

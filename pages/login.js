@@ -35,7 +35,7 @@ export default function Home() {
         body: JSON.stringify(body),
       })
       
-      console.log(loginApi.status)
+      
       let result = await loginApi.json();
      
       if (result.success && result.token) {

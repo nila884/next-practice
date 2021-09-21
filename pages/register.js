@@ -76,18 +76,19 @@ export default function Home() {
 <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Welcome</h2>
 <p className="mt-2 text-center text-sm text-gray-600">
     
-      <p className="font-medium text-gray-900 hover:text-gray-600">
+      {/* <p className="font-medium text-gray-900 hover:text-gray-600">
         create an account if you have not one yet here
       </p>
          <Link className="font-medium text-gray-900 hover:text-gray-600" href={`/register`}>
              <a>create new account</a>
         </Link>
-    </p>
+     */}
+     </p>
 </div>
 <div className="flex-1 max-w-md w-full space-y-8">
   <div>
    
-    <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Login</h2>
+    <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign up</h2>
   </div>
   <form className="mt-8 space-y-6" onSubmit={submitData}>
     <input type="hidden" name="remember" defaultValue="true" />
