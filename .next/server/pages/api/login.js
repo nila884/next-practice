@@ -1,62 +1,174 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/api/login";
-exports.ids = ["pages/api/login"];
+exports.id = 994;
+exports.ids = [994];
 exports.modules = {
 
-/***/ "./lib/prisma.js":
-/*!***********************!*\
-  !*** ./lib/prisma.js ***!
-  \***********************/
+/***/ 2019:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @prisma/client */ \"@prisma/client\");\n/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_prisma_client__WEBPACK_IMPORTED_MODULE_0__);\n// lib/prisma.ts\n\nlet prisma = _prisma_client__WEBPACK_IMPORTED_MODULE_0__.PrismaClient;\n\nif (false) {} else {\n  if (!global.prisma) {\n    global.prisma = new _prisma_client__WEBPACK_IMPORTED_MODULE_0__.PrismaClient();\n  }\n\n  prisma = global.prisma;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prisma);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9saWIvcHJpc21hLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUFBO0FBQ0E7QUFFQSxJQUFJQyxNQUFNLEdBQUVELHdEQUFaOztBQUVBLElBQUksT0FBdUMsRUFBM0MsTUFFTztBQUNMLE1BQUksQ0FBQ0UsTUFBTSxDQUFDRCxNQUFaLEVBQW9CO0FBQ2xCQyxJQUFBQSxNQUFNLENBQUNELE1BQVAsR0FBZ0IsSUFBSUQsd0RBQUosRUFBaEI7QUFDRDs7QUFDREMsRUFBQUEsTUFBTSxHQUFHQyxNQUFNLENBQUNELE1BQWhCO0FBQ0Q7O0FBRUQsaUVBQWVBLE1BQWYiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9teXByb2plY3QvLi9saWIvcHJpc21hLmpzP2M1NjUiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gbGliL3ByaXNtYS50c1xuaW1wb3J0IHsgUHJpc21hQ2xpZW50IH0gZnJvbSAnQHByaXNtYS9jbGllbnQnO1xuXG5sZXQgcHJpc21hPSBQcmlzbWFDbGllbnQ7XG5cbmlmIChwcm9jZXNzLmVudi5OT0RFX0VOViA9PT0gJ3Byb2R1Y3Rpb24nKSB7XG4gIHByaXNtYSA9IG5ldyBQcmlzbWFDbGllbnQoKTtcbn0gZWxzZSB7XG4gIGlmICghZ2xvYmFsLnByaXNtYSkge1xuICAgIGdsb2JhbC5wcmlzbWEgPSBuZXcgUHJpc21hQ2xpZW50KCk7XG4gIH1cbiAgcHJpc21hID0gZ2xvYmFsLnByaXNtYTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgcHJpc21hOyJdLCJuYW1lcyI6WyJQcmlzbWFDbGllbnQiLCJwcmlzbWEiLCJnbG9iYWwiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./lib/prisma.js\n");
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": () => (/* binding */ lib_prisma)
+});
+
+;// CONCATENATED MODULE: external "@prisma/client"
+const client_namespaceObject = require("@prisma/client");
+;// CONCATENATED MODULE: ./lib/prisma.js
+// lib/prisma.ts
+
+let prisma = client_namespaceObject.PrismaClient;
+
+if (true) {
+  prisma = new client_namespaceObject.PrismaClient();
+} else {}
+
+/* harmony default export */ const lib_prisma = (prisma);
 
 /***/ }),
 
-/***/ "./pages/api/login.js":
-/*!****************************!*\
-  !*** ./pages/api/login.js ***!
-  \****************************/
+/***/ 4241:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handle)\n/* harmony export */ });\n/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bcryptjs */ \"bcryptjs\");\n/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bcryptjs__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jsonwebtoken */ \"jsonwebtoken\");\n/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jsonwebtoken__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _lib_prisma__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../lib/prisma */ \"./lib/prisma.js\");\n\n\n\n/* JWT secret key */\n\nconst KEY = \"niyeraniyeraniyera\";\nasync function handle(req, res) {\n  // const auth= async (req, res) => {\n  // return new Promise(resolve => {\n  const {\n    method\n  } = req;\n\n  try {\n    switch (method) {\n      case 'POST':\n        /* Get Post Data */\n        const {\n          email,\n          password\n        } = req.body;\n        /* Any how email or password is blank */\n\n        if (!email || !password) {\n          return res.status(400).json({\n            status: 'error',\n            error: 'Request missing username or password'\n          });\n        }\n        /* Check user email in database */\n\n\n        const user = await _lib_prisma__WEBPACK_IMPORTED_MODULE_2__.default.user.findUnique({\n          where: {\n            email: email\n          }\n        }); // const user = USERS.find(user => {\n        //   return user.email === email;\n        // });\n\n        /* Check if exists */\n\n        if (!user) {\n          /* Send error with message */\n          res.status(400).json({\n            status: 'error',\n            error: 'User Not Found'\n          });\n        }\n        /* Variables checking */\n\n\n        if (user) {\n          const userId = user.id,\n                userEmail = user.email,\n                userCompanyId = user.companyId,\n                userPassword = user.password,\n                userCreated = user.createdAt;\n          const company = await _lib_prisma__WEBPACK_IMPORTED_MODULE_2__.default.companies.findUnique({\n            where: {\n              id: userCompanyId\n            }\n          }).then(company => {\n            bcryptjs__WEBPACK_IMPORTED_MODULE_0___default().compare(password, userPassword).then(isMatch => {\n              /* User matched */\n              if (isMatch) {\n                /* Create JWT Payload */\n                const payload = {\n                  id: userId,\n                  email: userEmail,\n                  userCompanyId: userCompanyId,\n                  companyName: company.name,\n                  createdAt: userCreated\n                };\n                console.log(payload);\n                /* Sign token */\n\n                jsonwebtoken__WEBPACK_IMPORTED_MODULE_1___default().sign(payload, KEY, {\n                  expiresIn: 3600 // 1 h in seconds\n\n                }, (err, token) => {\n                  /* Send succes with token */\n                  res.status(200).json({\n                    success: true,\n                    token: 'Bearer ' + token\n                  });\n                });\n              } else {\n                /* Send error with message */\n                res.status(400).json({\n                  status: 'error',\n                  error: 'Password incorrect'\n                });\n              }\n            });\n          });\n          /* Check and compare password */\n        }\n\n        break;\n\n      case 'PUT':\n        break;\n\n      case 'PATCH':\n        break;\n\n      default:\n        break;\n    }\n  } catch (error) {\n    throw error;\n  } //   return resolve();\n  // });\n\n}\n;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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QUFDTDtBQUNBaEMsZ0JBQUFBLEdBQUcsQ0FDQUssTUFESCxDQUNVLEdBRFYsRUFFR0MsSUFGSCxDQUVRO0FBQUVELGtCQUFBQSxNQUFNLEVBQUUsT0FBVjtBQUFtQkUsa0JBQUFBLEtBQUssRUFBRTtBQUExQixpQkFGUjtBQUdEO0FBQ0YsYUF2Q0Q7QUF5Q0QsV0EvQ3FCLENBQXRCO0FBb0RGO0FBRUQ7O0FBQ0Q7O0FBQ0YsV0FBSyxLQUFMO0FBQ0U7O0FBQ0YsV0FBSyxPQUFMO0FBQ0U7O0FBQ0Y7QUFDRTtBQS9GSjtBQWlHRCxHQWxHRCxDQWtHRSxPQUFPQSxLQUFQLEVBQWM7QUFDZCxVQUFNQSxLQUFOO0FBQ0QsR0F4RzBDLENBeUc3QztBQUNBOztBQUNEO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9teXByb2plY3QvLi9wYWdlcy9hcGkvbG9naW4uanM/MDM4NCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgYmNyeXB0IGZyb20gJ2JjcnlwdGpzJztcbmltcG9ydCBqd3QgZnJvbSAnanNvbndlYnRva2VuJztcbmltcG9ydCBwcmlzbWEgZnJvbSAnLi4vLi4vbGliL3ByaXNtYSc7XG5cbi8qIEpXVCBzZWNyZXQga2V5ICovXG5jb25zdCBLRVkgPSBcIm5peWVyYW5peWVyYW5peWVyYVwiO1xuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gaGFuZGxlKHJlcSwgcmVzKSB7XG4vLyBjb25zdCBhdXRoPSBhc3luYyAocmVxLCByZXMpID0+IHtcbiAgLy8gcmV0dXJuIG5ldyBQcm9taXNlKHJlc29sdmUgPT4ge1xuICAgIGNvbnN0IHsgbWV0aG9kIH0gPSByZXE7XG4gICAgdHJ5IHtcbiAgICAgIHN3aXRjaCAobWV0aG9kKSB7XG4gICAgICAgIGNhc2UgJ1BPU1QnOlxuICAgICAgICAgIC8qIEdldCBQb3N0IERhdGEgKi9cbiAgICAgICAgICBjb25zdCB7IGVtYWlsLCBwYXNzd29yZCB9ID0gcmVxLmJvZHk7XG4gICAgICAgICAgLyogQW55IGhvdyBlbWFpbCBvciBwYXNzd29yZCBpcyBibGFuayAqL1xuICAgICAgICAgIGlmICghZW1haWwgfHwgIXBhc3N3b3JkKSB7XG4gICAgICAgICAgICByZXR1cm4gcmVzLnN0YXR1cyg0MDApLmpzb24oe1xuICAgICAgICAgICAgICBzdGF0dXM6ICdlcnJvcicsXG4gICAgICAgICAgICAgIGVycm9yOiAnUmVxdWVzdCBtaXNzaW5nIHVzZXJuYW1lIG9yIHBhc3N3b3JkJyxcbiAgICAgICAgICAgIH0pO1xuICAgICAgICAgIH1cbiAgICAgICAgICAvKiBDaGVjayB1c2VyIGVtYWlsIGluIGRhdGFiYXNlICovXG4gICAgICAgICAgY29uc3QgdXNlciA9IGF3YWl0IHByaXNtYS51c2VyLmZpbmRVbmlxdWUoe1xuICAgICAgICAgICAgd2hlcmU6IHtcbiAgICAgICAgICAgICAgZW1haWw6IGVtYWlsLFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICB9KVxuICAgICAgICAgIC8vIGNvbnN0IHVzZXIgPSBVU0VSUy5maW5kKHVzZXIgPT4ge1xuICAgICAgICAgIC8vICAgcmV0dXJuIHVzZXIuZW1haWwgPT09IGVtYWlsO1xuICAgICAgICAgIC8vIH0pO1xuICAgICAgICAgIC8qIENoZWNrIGlmIGV4aXN0cyAqL1xuICAgICAgICAgIGlmICghdXNlcikge1xuICAgICAgICAgICAgLyogU2VuZCBlcnJvciB3aXRoIG1lc3NhZ2UgKi9cbiAgICAgICAgICAgIHJlcy5zdGF0dXMoNDAwKS5qc29uKHsgc3RhdHVzOiAnZXJyb3InLCBlcnJvcjogJ1VzZXIgTm90IEZvdW5kJyB9KTtcbiAgICAgICAgICB9XG4gICAgICAgICAgLyogVmFyaWFibGVzIGNoZWNraW5nICovXG4gICAgICAgICAgaWYgKHVzZXIpIHtcbiAgICAgICAgICAgIFxuICAgICAgICAgICAgY29uc3QgdXNlcklkID0gdXNlci5pZCxcbiAgICAgICAgICAgICAgdXNlckVtYWlsID0gdXNlci5lbWFpbCxcbiAgICAgICAgICAgICAgdXNlckNvbXBhbnlJZD11c2VyLmNvbXBhbnlJZCxcbiAgICAgICAgICAgICAgdXNlclBhc3N3b3JkID0gdXNlci5wYXNzd29yZCxcbiAgICAgICAgICAgICAgdXNlckNyZWF0ZWQgPSB1c2VyLmNyZWF0ZWRBdDtcblxuICAgICAgICAgICAgICBjb25zdCBjb21wYW55ID0gYXdhaXQgcHJpc21hLmNvbXBhbmllcy5maW5kVW5pcXVlKHtcbiAgICAgICAgICAgICAgICB3aGVyZToge1xuICAgICAgICAgICAgICAgICAgaWQ6IHVzZXJDb21wYW55SWRcbiAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICB9KS50aGVuKGNvbXBhbnk9PntcblxuICAgICAgICAgICAgICAgIGJjcnlwdC5jb21wYXJlKHBhc3N3b3JkLCB1c2VyUGFzc3dvcmQpLnRoZW4oaXNNYXRjaCA9PiB7XG4gICAgICAgICAgICAgICAgICAvKiBVc2VyIG1hdGNoZWQgKi9cbiAgICAgICAgICAgICAgICAgIGlmIChpc01hdGNoKSB7XG4gICAgXG4gICAgICAgICAgICAgICAgICAgIFxuICAgIFxuICAgICAgICAgICAgICAgICAgICAvKiBDcmVhdGUgSldUIFBheWxvYWQgKi9cbiAgICAgICAgICAgICAgICAgICAgY29uc3QgcGF5bG9hZCA9IHtcbiAgICAgICAgICAgICAgICAgICAgICBpZDogdXNlcklkLFxuICAgICAgICAgICAgICAgICAgICAgIGVtYWlsOiB1c2VyRW1haWwsXG4gICAgICAgICAgICAgICAgICAgICAgdXNlckNvbXBhbnlJZDp1c2VyQ29tcGFueUlkLFxuICAgICAgICAgICAgICAgICAgICAgIGNvbXBhbnlOYW1lOmNvbXBhbnkubmFtZSxcbiAgICAgICAgICAgICAgICAgICAgICBjcmVhdGVkQXQ6IHVzZXJDcmVhdGVkLFxuICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICB9O1xuICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKHBheWxvYWQpIFxuICAgICAgICAgICAgICAgICAgICAvKiBTaWduIHRva2VuICovXG4gICAgICAgICAgICAgICAgICAgIGp3dC5zaWduKFxuICAgICAgICAgICAgICAgICAgICAgIHBheWxvYWQsXG4gICAgICAgICAgICAgICAgICAgICAgS0VZLFxuICAgICAgICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIGV4cGlyZXNJbjogMzYwMCwgLy8gMSBoIGluIHNlY29uZHNcbiAgICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgICAgIChlcnIsIHRva2VuKSA9PiB7XG4gICAgICAgICAgICAgICAgICAgICAgICAvKiBTZW5kIHN1Y2NlcyB3aXRoIHRva2VuICovXG4gICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgc3VjY2VzczogdHJ1ZSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgdG9rZW46ICdCZWFyZXIgJyArIHRva2VuLFxuICAgICAgICAgICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgICAgICAgICAgLyogU2VuZCBlcnJvciB3aXRoIG1lc3NhZ2UgKi9cbiAgICAgICAgICAgICAgICAgICAgcmVzXG4gICAgICAgICAgICAgICAgICAgICAgLnN0YXR1cyg0MDApXG4gICAgICAgICAgICAgICAgICAgICAgLmpzb24oeyBzdGF0dXM6ICdlcnJvcicsIGVycm9yOiAnUGFzc3dvcmQgaW5jb3JyZWN0JyB9KTtcbiAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9KTtcbiAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgfSlcblxuICAgICAgICAgICAgICBcbiAgICAgICAgICAgIFxuXG4gICAgICAgICAgICAvKiBDaGVjayBhbmQgY29tcGFyZSBwYXNzd29yZCAqL1xuXG4gICAgICAgICAgfVxuICAgICAgICAgIGJyZWFrO1xuICAgICAgICBjYXNlICdQVVQnOlxuICAgICAgICAgIGJyZWFrO1xuICAgICAgICBjYXNlICdQQVRDSCc6XG4gICAgICAgICAgYnJlYWs7XG4gICAgICAgIGRlZmF1bHQ6XG4gICAgICAgICAgYnJlYWs7XG4gICAgICB9XG4gICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgIHRocm93IGVycm9yO1xuICAgIH1cbiAgLy8gICByZXR1cm4gcmVzb2x2ZSgpO1xuICAvLyB9KTtcbn07Il0sIm5hbWVzIjpbImJjcnlwdCIsImp3dCIsInByaXNtYSIsIktFWSIsImhhbmRsZSIsInJlcSIsInJlcyIsIm1ldGhvZCIsImVtYWlsIiwicGFzc3dvcmQiLCJib2R5Iiwic3RhdHVzIiwianNvbiIsImVycm9yIiwidXNlciIsImZpbmRVbmlxdWUiLCJ3aGVyZSIsInVzZXJJZCIsImlkIiwidXNlckVtYWlsIiwidXNlckNvbXBhbnlJZCIsImNvbXBhbnlJZCIsInVzZXJQYXNzd29yZCIsInVzZXJDcmVhdGVkIiwiY3JlYXRlZEF0IiwiY29tcGFueSIsImNvbXBhbmllcyIsInRoZW4iLCJjb21wYXJlIiwiaXNNYXRjaCIsInBheWxvYWQiLCJjb21wYW55TmFtZSIsIm5hbWUiLCJjb25zb2xlIiwibG9nIiwic2lnbiIsImV4cGlyZXNJbiIsImVyciIsInRva2VuIiwic3VjY2VzcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/api/login.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ handle)
+/* harmony export */ });
+/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2773);
+/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bcryptjs__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9722);
+/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jsonwebtoken__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _lib_prisma__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2019);
+
+
+
+/* JWT secret key */
+
+const KEY = "niyeraniyeraniyera";
+async function handle(req, res) {
+  // const auth= async (req, res) => {
+  // return new Promise(resolve => {
+  const {
+    method
+  } = req;
+
+  try {
+    switch (method) {
+      case 'POST':
+        /* Get Post Data */
+        const {
+          email,
+          password
+        } = req.body;
+        /* Any how email or password is blank */
+
+        if (!email || !password) {
+          return res.status(400).json({
+            status: 'error',
+            error: 'Request missing username or password'
+          });
+        }
+        /* Check user email in database */
+
+
+        const user = await _lib_prisma__WEBPACK_IMPORTED_MODULE_2__/* .default.user.findUnique */ .Z.user.findUnique({
+          where: {
+            email: email
+          }
+        }); // const user = USERS.find(user => {
+        //   return user.email === email;
+        // });
+
+        /* Check if exists */
+
+        if (!user) {
+          /* Send error with message */
+          res.status(400).json({
+            status: 'error',
+            error: 'User Not Found'
+          });
+        }
+        /* Variables checking */
+
+
+        if (user) {
+          const userId = user.id,
+                userEmail = user.email,
+                userCompanyId = user.companyId,
+                userPassword = user.password,
+                userCreated = user.createdAt;
+          const company = await _lib_prisma__WEBPACK_IMPORTED_MODULE_2__/* .default.companies.findUnique */ .Z.companies.findUnique({
+            where: {
+              id: userCompanyId
+            }
+          }).then(company => {
+            bcryptjs__WEBPACK_IMPORTED_MODULE_0___default().compare(password, userPassword).then(isMatch => {
+              /* User matched */
+              if (isMatch) {
+                /* Create JWT Payload */
+                const payload = {
+                  id: userId,
+                  email: userEmail,
+                  userCompanyId: userCompanyId,
+                  companyName: company.name,
+                  createdAt: userCreated
+                };
+                console.log(payload);
+                /* Sign token */
+
+                jsonwebtoken__WEBPACK_IMPORTED_MODULE_1___default().sign(payload, KEY, {
+                  expiresIn: 3600 // 1 h in seconds
+
+                }, (err, token) => {
+                  /* Send succes with token */
+                  res.status(200).json({
+                    success: true,
+                    token: 'Bearer ' + token
+                  });
+                });
+              } else {
+                /* Send error with message */
+                res.status(400).json({
+                  status: 'error',
+                  error: 'Password incorrect'
+                });
+              }
+            });
+          });
+          /* Check and compare password */
+        }
+
+        break;
+
+      case 'PUT':
+        break;
+
+      case 'PATCH':
+        break;
+
+      default:
+        break;
+    }
+  } catch (error) {
+    throw error;
+  } //   return resolve();
+  // });
+
+}
+;
 
 /***/ }),
 
-/***/ "@prisma/client":
-/*!*********************************!*\
-  !*** external "@prisma/client" ***!
-  \*********************************/
-/***/ ((module) => {
-
-module.exports = require("@prisma/client");
-
-/***/ }),
-
-/***/ "bcryptjs":
-/*!***************************!*\
-  !*** external "bcryptjs" ***!
-  \***************************/
+/***/ 2773:
 /***/ ((module) => {
 
 module.exports = require("bcryptjs");
 
 /***/ }),
 
-/***/ "jsonwebtoken":
-/*!*******************************!*\
-  !*** external "jsonwebtoken" ***!
-  \*******************************/
+/***/ 9722:
 /***/ ((module) => {
 
 module.exports = require("jsonwebtoken");
@@ -70,7 +182,7 @@ module.exports = require("jsonwebtoken");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/api/login.js"));
+var __webpack_exports__ = (__webpack_exec__(4241));
 module.exports = __webpack_exports__;
 
 })();

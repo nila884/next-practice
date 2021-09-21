@@ -77,7 +77,7 @@ export default function Home() {
 <p className="mt-2 text-center text-sm text-gray-600">
     
       <p className="font-medium text-gray-900 hover:text-gray-600">
-        create an account if you haven't one yet here
+        create an account if you have not one yet here
       </p>
          <Link className="font-medium text-gray-900 hover:text-gray-600" href={`/register`}>
              <a>create new account</a>
