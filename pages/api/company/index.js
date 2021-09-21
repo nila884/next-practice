@@ -1,10 +1,8 @@
 import prisma from '../../../lib/prisma';
 
-export default async function handle(req) {
+export default async function handle(req,res) {
   const { companyName} = req.body;
- const newCompany= await prisma.companies.create({
-    data: {
-      name: companyName 
-    },
-  })
+  const result= await prisma.user.findMany()
+
+  res.json(result);
 }

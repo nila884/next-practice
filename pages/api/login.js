@@ -4,7 +4,6 @@ import prisma from '../../lib/prisma';
 
 /* JWT secret key */
 const KEY = "niyeraniyeraniyera";
-console.log(KEY)
 export default async function handle(req, res) {
 // const auth= async (req, res) => {
   // return new Promise(resolve => {
@@ -37,48 +36,67 @@ export default async function handle(req, res) {
           }
           /* Variables checking */
           if (user) {
-            console.log(user)
+            
             const userId = user.id,
               userEmail = user.email,
               userCompanyId=user.companyId,
               userPassword = user.password,
               userCreated = user.createdAt;
+
+              const company = await prisma.companies.findUnique({
+                where: {
+                  id: userCompanyId
+                },
+              }).then(company=>{
+
+                bcrypt.compare(password, userPassword).then(isMatch => {
+                  /* User matched */
+                  if (isMatch) {
+    
+                    
+    
+                    /* Create JWT Payload */
+                    const payload = {
+                      id: userId,
+                      email: userEmail,
+                      userCompanyId:userCompanyId,
+                      companyName:company.name,
+                      createdAt: userCreated,
+                      
+                    };
+                   console.log(payload) 
+                    /* Sign token */
+                    jwt.sign(
+                      payload,
+                      KEY,
+                      {
+                        expiresIn: 3600, // 1 h in seconds
+                      },
+                      (err, token) => {
+                        /* Send succes with token */
+                        
+                        res.status(200).json({
+                          success: true,
+                          token: 'Bearer ' + token,
+                        });
+                        
+                      },
+                    );
+                  } else {
+                    /* Send error with message */
+                    res
+                      .status(400)
+                      .json({ status: 'error', error: 'Password incorrect' });
+                  }
+                });
+                
+              })
+
+              
+            
+
             /* Check and compare password */
-            bcrypt.compare(password, userPassword).then(isMatch => {
-              /* User matched */
-              if (isMatch) {
-                /* Create JWT Payload */
-                const payload = {
-                  id: userId,
-                  email: userEmail,
-                  userCompanyId:userCompanyId,
-                  createdAt: userCreated,
-                  
-                };
-                console.log(payload)
-                /* Sign token */
-                jwt.sign(
-                  payload,
-                  KEY,
-                  {
-                    expiresIn: 31556926, // 1 year in seconds
-                  },
-                  (err, token) => {
-                    /* Send succes with token */
-                    console.log(token)
-                    res.status(200).json({
-                      success: true,
-                      token: 'Bearer ' + token,
-                    });
-                  },
-                );
-              } else {
-                /* Send error with message */
-                res
-                  .status(400)
-                  .json({ status: 'error', error: 'Password incorrect' });
-              }
-            });
+
           }
           break;
         case 'PUT':

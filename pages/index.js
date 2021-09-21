@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head'
-import Image from 'next/image'
+
 
 /* middleware */
 import {
@@ -18,7 +18,13 @@ function handleOnClickLogout(e) {
 }
 export default function About(props) {
   const { profile } = props;
-
+  //  console.log(profile)
+  //  let loginApi= await fetch('/api/login', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify(body),
+  // })
+  
   function handleOnClickLogout(e) {
     setLogout(e);
   }
@@ -37,7 +43,7 @@ export default function About(props) {
     {!profile ? (
     <span className="font-semibold text-xl tracking-tight">Company Name</span>
     ):(
-      <span className="font-semibold text-xl tracking-tight">Tailwind CSS</span>
+      <span className="font-semibold text-xl tracking-tight">{ profile.companyName }</span>
     )}
 
   </div>
@@ -64,7 +70,8 @@ export default function About(props) {
     </div>
   </div>
 </nav>
-          {/* <h1 classNameName="title">About Page</h1>
+          {
+          /* <h1 classNameName="title">About Page</h1>
           {!profile ? (
             
             <Link>
@@ -91,7 +98,8 @@ export default function About(props) {
                 </fieldset>
               </div>
             </div>
-          )} */}
+          )} */
+          }
         </main>
       </div>
   );

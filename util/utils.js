@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 
 import jwt from 'jsonwebtoken';
 
-const SECRET_KEY = process.env.JWT_KEY;
+const SECRET_KEY = "niyeraniyeraniyera";
 
 /*
  * @params {jwtToken} extracted from cookies

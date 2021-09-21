@@ -29,13 +29,15 @@ export default function Home() {
           // res.status(422).json({error:"please ass all the fields"})
         }
       const body = { password,email};
-      let result= await fetch('/api/login', {
+      let loginApi= await fetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       })
-      result = await loginApi.json();
-      console.log(result)
+      
+      console.log(loginApi.status)
+      let result = await loginApi.json();
+     
       if (result.success && result.token) {
         Cookies.set('token', result.token);
         // window.location.href = referer ? referer : "/";
@@ -49,62 +51,7 @@ export default function Home() {
       }
   }
 
-  return (
-//     <div className={styles.container}>
-//       <Head>
-//         <title>Login</title>
-//         <meta name="description" content="next app" />
-//         <link rel="icon" href="/favicon.ico" />
-//       </Head>
-
-//       <main className={styles.main}>
-//       <div>
-//      <form onSubmit={submitData}>
-//           <h1>Login</h1>
-
-//           <input
-//             autoFocus
-//             onChange={(e) => setEmail(e.target.value)}
-//             placeholder="email"
-//             type="email"
-//             value={email}
-//           />
-//           <input
-//             autoFocus
-//             onChange={(e) => setPassword(e.target.value)}
-//             placeholder="password"
-//             type="password"
-//             value={password}
-//           />
-
-
-
-//           <input  type="submit" value="login" />
-//           <a className="back" href="#" onClick={() => Router.push('/')}>
-    
-//           </a>
-//         </form>
-//      </div>
-//     <Link href={`/register`}>
-//                 <a>create an account</a>
-//               </Link>
-  
-//       </main>
-
-//       <footer className={styles.footer}>
-//         <a
-//           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Powered by{' '}
-//           <span className={styles.logo}>
-//             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-//           </span>
-//         </a>
-//       </footer>
-//     </div>
-//   
+  return (   
 <div className="w-full bg-green-900 flex items-center justify-center h-screen">
 <div className="flex w-3/5 rounded-md bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
 <div className="flex-1 pr-16 mr-10">
