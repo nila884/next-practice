@@ -10,16 +10,6 @@ export default async function handle(req, res) {
           break;
     }
 
-//     const user =  prisma.companies.findUnique({
-//         where: {
-//           id: req.query.id
-//         },
-//       })
-    
-//       console.log(user)
-//   // console.log(result)
-//   res.json(user);
-
 }
 
 const getCompany = async (req,res)=>{

@@ -26,9 +26,6 @@ export default async function handle(req, res) {
               email: email,
             },
           })
-          // const user = USERS.find(user => {
-          //   return user.email === email;
-          // });
           /* Check if exists */
           if (!user) {
             /* Send error with message */
@@ -54,7 +51,7 @@ export default async function handle(req, res) {
                   if (isMatch) {
     
                     
-    
+
                     /* Create JWT Payload */
                     const payload = {
                       id: userId,
@@ -91,10 +88,6 @@ export default async function handle(req, res) {
                 });
                 
               })
-
-              
-            
-
             /* Check and compare password */
 
           }
@@ -109,6 +102,5 @@ export default async function handle(req, res) {
     } catch (error) {
       throw error;
     }
-  //   return resolve();
-  // });
+
 };
