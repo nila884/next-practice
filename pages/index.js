@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head'
-
+import { signOut, useSession } from 'next-auth/client'
 
 /* middleware */
 import {
@@ -28,7 +28,12 @@ export default function About(props) {
   function handleOnClickLogout(e) {
     setLogout(e);
   }
-
+  const [session, loading] = useSession()
+  if(session){
+    console.log(session)
+  }else{
+    console.log("not connexted")
+  }
   return (
     <div className="container">
             <Head>
@@ -70,6 +75,17 @@ export default function About(props) {
     </div>
   </div>
 </nav>
+<div>
+{!session ? (
+          <Link href="api/auth/signin">
+            <a>Log in with default form</a>
+          </Link>
+        ) : (
+          <button onClick={() => signOut()}>
+            <a>Log out</a>
+          </button>
+        )}
+        </div>
           {
           /* <h1 classNameName="title">About Page</h1>
           {!profile ? (
