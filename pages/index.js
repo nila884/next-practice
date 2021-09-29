@@ -30,9 +30,9 @@ export default function About(props) {
   }
   const [session, loading] = useSession()
   if(session){
-    console.log(session)
+    console.log(session.company.name)
   }else{
-    console.log("not connexted")
+    console.log("not connected")
   }
   return (
     <div className="container">
@@ -45,10 +45,10 @@ export default function About(props) {
           
 <nav className="flex items-center justify-between flex-wrap bg-green-900 p-6">
   <div className="flex items-center flex-no-shrink text-white mr-6">
-    {!profile ? (
+    {!session ? (
     <span className="font-semibold text-xl tracking-tight">Company Name</span>
     ):(
-      <span className="font-semibold text-xl tracking-tight">{ profile.companyName }</span>
+      <span className="font-semibold text-xl tracking-tight">{ session.company.name }</span>
     )}
 
   </div>
@@ -65,24 +65,26 @@ export default function About(props) {
       </a> */}
     </div>
     <div>
-      {!profile ? (
-        <Link href='/login'>
-        <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Login</a>
-        </Link>
-      ):(
-        <a href="#" onClick={e => handleOnClickLogout(e)} className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Logout</a>
-      )}
+    {!session ? (
+          <Link href='api/auth/signin'>
+            <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Log in</a>
+          </Link>
+        ) : (
+          <button  onClick={() => signOut()}>
+            <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Log out</a>
+          </button>
+        )}
     </div>
   </div>
 </nav>
 <div>
 {!session ? (
-          <Link href="api/auth/signin">
-            <a>Log in with default form</a>
+          <Link href='api/auth/signin'>
+            <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Log in</a>
           </Link>
         ) : (
-          <button onClick={() => signOut()}>
-            <a>Log out</a>
+          <button  onClick={() => signOut()}>
+            <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Log out</a>
           </button>
         )}
         </div>
