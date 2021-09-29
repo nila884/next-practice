@@ -44,27 +44,7 @@ const configuration = {
         } else {
           return null          
         }
-        // const user = await prisma.user.findUnique({
-        //   where: {
-        //     email: credentials.Email,
-        //   },
-        // }).then( user =>{
-        //   prisma.companies.findUnique({
-        //     where: {
-        //       id: user.companyId
-        //     },
-        //   }).then(company=>{
-        //     bcrypt.compare(credentials.Password, user.password).then(isMatch => {
-        //           if (isMatch) {
-        //             userToReturn=user
-        //           }else{
-        //             userToReturn=null
-        //           }
-        //     })
-        //   })
-        // }) 
-        //   // console.log(user)
-        //   return userToReturn
+
         }
       })
 

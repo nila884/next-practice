@@ -29,11 +29,7 @@ export default function About(props) {
     setLogout(e);
   }
   const [session, loading] = useSession()
-  if(session){
-    console.log(session.company.name)
-  }else{
-    console.log("not connected")
-  }
+
   return (
     <div className="container">
             <Head>
