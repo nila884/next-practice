@@ -190,7 +190,7 @@ export default function Home() {
     
 
   </form>
-      <Link href={`/login`}>
+      <Link href={`/`}>
                  <a className="h-5 w-5  text-gray-900 group-hover:text-gray-800" aria-hidden="true">Cancel</a>
          </Link>
 </div>

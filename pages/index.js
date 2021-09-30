@@ -62,9 +62,22 @@ export default function About(props) {
     </div>
     <div>
     {!session ? (
-          <Link href='api/auth/signin'>
-            <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Log in</a>
-          </Link>
+
+                <div>
+                    <div>
+                    <Link href='api/auth/signin'>
+                      <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Log in</a>
+                    </Link>
+                    </div>
+                    <div>
+                    <Link href={`/register`}>
+                      <a className="font-medium text-gray-50 hover:text-gray-400">New account</a>
+                    </Link>
+                    </div>
+                </div>
+              
+                
+           
         ) : (
           <button  onClick={() => signOut()}>
             <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0">Log out</a>
